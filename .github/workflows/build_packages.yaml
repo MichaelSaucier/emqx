@@ -235,7 +235,7 @@ jobs:
         export SNAP_BASE=core22
 
         envsubst '${PROFILE},${EMQX_VERSION},${PACKAGE_SOURCE},${SNAP_BASE}' < deploy/snap/snapcraft.yaml > ./snapcraft.yaml
-        snapcraft --use-lxd
+        sudo snapcraft --use-lxd
 
     - name: Test snap
       run: |
